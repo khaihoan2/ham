@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="number">
+<input type="text" id="number1">
+<button onclick="addDoiso()">Tạo</button>
+<p id="result"></p>
+<script>
+    function addDoiso() {
+        number = +document.getElementById(number).value;
+        number1 = +document.getElementById(number1).value;
+        if (number > number1) {
+            document.getElementById("result").innerHTML = "Tham số thứ nhất lớn hơn tham số thứ hai "
+        } else {
+            document.getElementById("result").innerHTML = "Tổng 2 tham số:" + (number + number1);
+        }
+    }
+</script>
+</body>
+</html>

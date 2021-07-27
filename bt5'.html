@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<p id="ketqua"></p>
+<script>
+  let a = new Array("Polaris","Aldebaran","Deneb","Vega","Altair","Dubhe ","Regulus");
+  let b = new Array("Ursa Minor","Tarurus","Cygnus","Lyra","Aquila","Ursa Major ","Leo");
+  let nameStar = prompt("Nhập tên ngôi sao bạn muốn tìm hiểu :");
+  let check = true;
+  findStar(nameStar);
+  function findStar (nameStar){
+    for (let i = 0; i < a.length; i++) {
+      if (nameStar.toLowerCase() == a[i].toLowerCase()){
+        document.getElementById("ketqua").innerText = b[i];
+        check = true;
+        break;
+      }else {
+        check = false;
+      }
+    }
+    if (check == false){
+      document.getElementById("ketqua").innerText = "Không thấy star mà bạn muốn tìm !!!";
+    }
+  }
+
+</script>
+</body>
+</html>
